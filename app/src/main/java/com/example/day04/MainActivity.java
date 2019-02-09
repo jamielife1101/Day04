@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout cont;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +19,18 @@ public class MainActivity extends AppCompatActivity {
         cont = findViewById(R.id.container);
     }
 
-    public void xmlChange(View v) {
-
+    public void xmlChange1(View v) {
+        cont.removeAllViews();
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.sub, cont, true);
+        inflater.inflate(R.layout.sub1, cont, true);
+
+    }
+
+    public void xmlChange2(View v) {
+        cont.removeAllViews();
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.sub2, cont, true);
+
+
     }
 }
