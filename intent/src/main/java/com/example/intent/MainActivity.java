@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     public void goToAbcd(View v) {
 
         Intent abcd = new Intent(getApplicationContext(), Abcd.class);
+
+        abcd.putExtra("num", 1234);
+
         startActivity(abcd);
 
     }
