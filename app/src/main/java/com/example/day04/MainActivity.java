@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         cont = findViewById(R.id.container);
+
+        inflater.inflate(R.layout.sub1, cont, true);// 시작할 때부터 sub1으로 시작하고 싶을때.
     }
 
     public void xmlChange1(View v) {
