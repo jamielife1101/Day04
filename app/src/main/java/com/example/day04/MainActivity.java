@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         EditText et = cont.findViewById(R.id.editText);
         String str = et.getText().toString();
 
+        CheckBox cb1 = cont.findViewById(R.id.checkBox1);
+        CheckBox cb2 = cont.findViewById(R.id.checkBox2);
+        CheckBox cb3 = cont.findViewById(R.id.checkBox3);
+        Boolean isChecked1 = cb1.isChecked();
+        Boolean isChecked2 = cb2.isChecked();
+        Boolean isChecked3 = cb3.isChecked();
+
         cont.removeAllViews();
         inflater.inflate(R.layout.sub1, cont, true);
 
@@ -37,11 +45,26 @@ public class MainActivity extends AppCompatActivity {
 
         et = cont.findViewById(R.id.editText);
         et.setText(str);
+
+        cb1 = cont.findViewById(R.id.checkBox1);
+        cb2 = cont.findViewById(R.id.checkBox2);
+        cb3 = cont.findViewById(R.id.checkBox3);
+        cb1.setChecked(isChecked1);
+        cb2.setChecked(isChecked2);
+        cb3.setChecked(isChecked3);
     }
 
     public void xmlChange2(View v) {
         EditText et = cont.findViewById(R.id.editText);
         String str = et.getText().toString();
+
+        CheckBox cb1 = cont.findViewById(R.id.checkBox1);
+        CheckBox cb2 = cont.findViewById(R.id.checkBox2);
+        CheckBox cb3 = cont.findViewById(R.id.checkBox3);
+        Boolean isChecked1 = cb1.isChecked();
+        Boolean isChecked2 = cb2.isChecked();
+        Boolean isChecked3 = cb3.isChecked();
+
 
         cont.removeAllViews();
         inflater.inflate(R.layout.sub2, cont, true);
@@ -50,5 +73,12 @@ public class MainActivity extends AppCompatActivity {
 
         et = cont.findViewById(R.id.editText);
         et.setText(str);
+
+        cb1 = cont.findViewById(R.id.checkBox1);
+        cb2 = cont.findViewById(R.id.checkBox2);
+        cb3 = cont.findViewById(R.id.checkBox3);
+        cb1.setChecked(isChecked1);
+        cb2.setChecked(isChecked2);
+        cb3.setChecked(isChecked3);
     }
 }
