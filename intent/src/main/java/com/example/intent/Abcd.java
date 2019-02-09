@@ -18,4 +18,9 @@ public class Abcd extends AppCompatActivity {
         Intent main = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(main);
     }
+
+    public void finish(View v) {
+
+        this.finish();
+    }
 }
