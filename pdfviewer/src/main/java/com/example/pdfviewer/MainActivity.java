@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         String  sdCardPath = Environment.getExternalStorageDirectory().getAbsolutePath();
 //        String  sdCardPath = Environment.getExternalStorageDirectory().toString();
         Toast.makeText(getApplicationContext(), sdCardPath, Toast.LENGTH_SHORT).show();
-        File file = new File(sdCardPath+"/Cats/"+editText.toString()+".jpg");
+        File file = new File(sdCardPath+"/Cats/"+editText.getText()+".jpg"); // ***editText에 getText() 메소드로 입력된 텍스트 가져오기.
         Uri uri = Uri.fromFile(file);
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
